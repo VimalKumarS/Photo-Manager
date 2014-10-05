@@ -1,0 +1,241 @@
+﻿<Window xmlns:my1="clr-namespace:Microsoft.WPFControlsLibrary;assembly=WPFControlsLibrary"  x:Class="PhotoManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Photo Organizer"  Icon="/PhotoManager;component/Images/images.ico"
+        xmlns:local="clr-namespace:PhotoManager"
+        xmlns:my="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon" WindowState="Maximized" Background="#FFC5CFDF">
+    <Grid Height="Auto" x:Name="parentgrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <my:Ribbon  Name="ImageRbn" >
+            <my:Ribbon.HelpPaneContent>
+                <my:RibbonButton SmallImageSource="Images\help.png" />
+            </my:Ribbon.HelpPaneContent>
+            <my:Ribbon.QuickAccessToolBar>
+                <my:RibbonQuickAccessToolBar>
+                    <my:RibbonButton x:Name ="Save" SmallImageSource="/PhotoManager;component/Images/save.png" />
+
+                </my:RibbonQuickAccessToolBar>
+            </my:Ribbon.QuickAccessToolBar>
+            <my:Ribbon.ApplicationMenu>
+                <my:RibbonApplicationMenu KeyTip="F">
+                    <my:RibbonApplicationMenuItem Header="Options" ImageSource="/PhotoManager;component/Images/options.png" />
+                    <my:RibbonApplicationMenuItem Header="Exit" ImageSource="/PhotoManager;component/Images/quit.png" />
+                </my:RibbonApplicationMenu>
+            </my:Ribbon.ApplicationMenu>
+
+            <!-- Ribbon Tab #1: Home -->
+            <my:RibbonTab Header="Home" KeyTip="H" >
+              
+                <!-- Employee And Payroll group-->
+                <my:RibbonGroup x:Name="Social" Header="Import">
+                    <my:RibbonButton LargeImageSource="Images\MyComp2.jpg" Label="MyComputer"  KeyTip="V" Click="RibbonButton_Click">
+
+                    </my:RibbonButton>
+                    <my:RibbonButton LargeImageSource="Images\facebook.jpg" Label="Facebook" KeyTip="V">
+
+                    </my:RibbonButton>
+                    <my:RibbonButton LargeImageSource="/PhotoManager;component/Images/googleplus.jpg" Label="Google+" KeyTip="V">
+
+                    </my:RibbonButton>
+                    <my:RibbonButton LargeImageSource="/PhotoManager;component/Images/instagram2.jpg" Label="Instagram" KeyTip="V">
+
+                    </my:RibbonButton>
+                   
+                </my:RibbonGroup>
+                <!-- Home  group-->
+                <my:RibbonGroup x:Name="ClipboardGroup" Header="Edit">
+                    <!--<my:RibbonMenuButton  LargeImageSource="/PhotoManager;component/Images/openfolder.jpg" Label="Open" KeyTip="X" ItemsSource="{Binding}" />-->
+                    <my:RibbonButton LargeImageSource="Images\save.png" Label="Save" KeyTip="FP" Click="RibbonButton_Click_2" />
+                   
+                    <my:RibbonButton SmallImageSource="Images\cut.png" Label="Cut" KeyTip="X" />
+                    <my:RibbonButton SmallImageSource="Images\copy.png" Label="Copy" KeyTip="C" />
+                    <!--<my:RibbonButton SmallImageSource="Images\save.png" Label="Save" KeyTip="S" />-->
+                    <my:RibbonMenuButton SmallImageSource="Images\paste.png" Label="Paste" KeyTip="V">
+                       <!--<my:RibbonMenuItem ImageSource="Images\paste.png" Header="Keep Text Only" KeyTip="T"/>
+                        <my:RibbonMenuItem ImageSource="Images\paste.png" Header="Paste Special..." KeyTip="P"/>-->
+                    </my:RibbonMenuButton>
+
+                </my:RibbonGroup>
+                <my:RibbonGroup x:Name="Operation" Header="Create">
+                    <my:RibbonButton LargeImageSource="Images\collage.jpg" Label="Collage"  KeyTip="V" Click="RibbonButton_Click_1">
+
+                    </my:RibbonButton>
+                    <my:RibbonButton LargeImageSource="Images\PhotoAlbum1.jpg" Label="Album"  KeyTip="V" Click="RibbonButton_Click_4">
+
+                    </my:RibbonButton>
+                    <my:RibbonButton LargeImageSource="Images\EventCard.png" Label="Event Card"  KeyTip="V" >
+
+                    </my:RibbonButton>
+                </my:RibbonGroup>
+                <my:RibbonGroup x:Name="format" Header="Image">
+                    <my:RibbonMenuItem ImageSource="Images\crop.png" Header="Crop &amp; Rotate" />
+                    <my:RibbonMenuItem ImageSource="Images\Resize.png" Header="Resize" KeyTip="P"/>
+                    <my:RibbonMenuItem ImageSource="Images\AutoCorrect.png" Header="Auto Correct" KeyTip="P"/>
+                   
+                    <my:RibbonMenuButton Label="Graphics"  HorizontalAlignment="Left" KeyTip="V">
+                        <my:RibbonMenuItem ImageSource="Images\Test.png"  Header="Text" KeyTip="T"/>
+                        <my:RibbonMenuItem ImageSource="Images\Bubbles.png" Header="Bubbles" KeyTip="P"/>
+                        <my:RibbonMenuItem ImageSource="Images\Stickies.png" Header="Stickies" KeyTip="P"/>
+                        <my:RibbonMenuItem ImageSource="Images\Party.png" Header="Party" KeyTip="P"/>
+                        <my:RibbonMenuItem ImageSource="Images\Animals.png" Header="Animal" KeyTip="P"/>
+                    </my:RibbonMenuButton>
+                    <my:RibbonMenuButton Label="Effects"   HorizontalAlignment="Left" KeyTip="V" FocusedBorderBrush="{x:Null}" FocusedBackground="{x:Null}" MouseOverBackground="{x:Null}">
+                        <StackPanel Orientation="Horizontal">
+                        
+                            <my:RibbonButton  LargeImageSource="Images\Effect1.png" Label="Effect1" KeyTip="T" FocusedBorderBrush="{x:Null}" FocusedBackground="{x:Null}" />
+
+                            <my:RibbonButton  LargeImageSource="Images\Effect2.png" Label="Effect2" KeyTip="T" FocusedBorderBrush="{x:Null}" FocusedBackground="{x:Null}"/>
+                            <my:RibbonButton  LargeImageSource="Images\Effect3.png"  Label="Effect3" KeyTip="T" FocusedBorderBrush="{x:Null}" FocusedBackground="{x:Null}"/>
+                                <my:RibbonButton  LargeImageSource="Images\Effect4.png" Label="Effect4"  KeyTip="T" FocusedBorderBrush="{x:Null}" FocusedBackground="{x:Null}"/>
+                        </StackPanel>
+                    </my:RibbonMenuButton>
+                    <my:RibbonMenuButton Label="Adjustments" KeyTip="V">
+                        <!--<my:RibbonMenuItem ImageSource="Images\paste.png" Header="Keep Text Only" KeyTip="T"/>
+                        <my:RibbonMenuItem ImageSource="Images\paste.png" Header="Paste Special..." KeyTip="P"/>-->
+                        <DockPanel VerticalAlignment="Center" Margin="10" Width="200">
+                            <Label DockPanel.Dock="Left" FontWeight="Bold">Brightness:</Label>
+                            
+                            <Slider Maximum="255" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" Name="slColorB"  />
+                        </DockPanel>
+                        <DockPanel VerticalAlignment="Center" Margin="10" Width="200">
+                            <Label DockPanel.Dock="Left" FontWeight="Bold">Sharpness:</Label>
+
+                            <Slider Maximum="255" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" Name="slColorB1"  />
+                        </DockPanel>
+                        <DockPanel VerticalAlignment="Center" Margin="10" Width="200">
+                            <Label DockPanel.Dock="Left" FontWeight="Bold">Blur:</Label>
+
+                            <Slider Maximum="255" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" Name="slColorB2"  />
+                        </DockPanel>
+                    </my:RibbonMenuButton>
+                   
+                    <!--<Image Source="Images\Editor.jpg" Width="280" Height="90"></Image>-->
+                </my:RibbonGroup>
+                <my:RibbonGroup x:Name="Sync" Header="Share">
+                    <my:RibbonButton LargeImageSource="/PhotoManager;component/Images/sync3.png"  Label="Sync" KeyTip="X" Click="RibbonButton_Click_3" />
+                </my:RibbonGroup>
+            </my:RibbonTab>
+        </my:Ribbon>
+        <!--<StackPanel Grid.Row="1"  Height="Auto" >-->
+        <Grid Height="Auto" Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="150"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="185"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <ListView Margin="10" Grid.Column="0" Grid.RowSpan="2" x:Name="lvDataBinding" >
+                <!-- Set how to display the items in the list view -->
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="VerticalContentAlignment" Value="Top" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Width="110" Height="125" BorderThickness="1" BorderBrush="DarkGray" VerticalAlignment="Center" Margin="7,5,7,5">
+                            <StackPanel >
+                                <Image ToolTip="{Binding Path=ImageName}" Source="{Binding ImagePath}" Height="100" Width="100" Margin="3,0,0,0" x:Name="Image" ></Image>
+
+                                <TextBlock Text="{Binding ImageName}" FontWeight="Bold" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!--<TextBlock 
+               Text="This text is on the left."
+               TextWrapping="Wrap"
+               Background="LightYellow"
+               Grid.RowSpan="2"/>-->
+            <!--<TextBlock Grid.Column="1"
+               Text="This text is at the top right."
+               TextWrapping="Wrap"
+               Background="AliceBlue"/>-->
+            <TabControl Grid.Column="1" Name="tabControl" TabStripPlacement="Top" Background="#FFDFE9F5" BorderBrush="#FFDFE9F6" Margin="10,10,0,5">
+                <TabItem Header="Untilted_1" IsSelected="True" Background="#FFEDF3F9">
+                    <Border Margin="19" BorderThickness="1" Grid.Column="1" >
+                        <Border.Effect>
+                            <DropShadowEffect />
+                        </Border.Effect>
+
+                        <Canvas AllowDrop="True"  x:Name="canvas" Grid.Column="1"  MinHeight="200" Margin="20" Background="White" />
+                    </Border>
+                   
+                </TabItem>
+               
+            </TabControl>
+            <StackPanel Grid.Row="1" Margin="10,0,0,5" Grid.Column="1" TextBlock.FontSize="14" DataContext="{Binding SelectedItem, ElementName=templateDataBinding}">
+                <TextBlock  Text="{Binding ImageName}" />
+            </StackPanel>
+            <ListView  Margin="10,18,10,10"  Grid.Column="1"
+               Grid.Row="1" x:Name="templateDataBinding" SelectionChanged="templateDataBinding_SelectionChanged">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"></StackPanel>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Width="110" Height="100" BorderThickness="1" BorderBrush="DarkGray" VerticalAlignment="Center" Margin="7,5,7,5">
+                            <StackPanel Orientation="Horizontal" >
+                                <Image ToolTip="{Binding Path=ImageName}" Source="{Binding ImagePath}" Height="90" Width="100" Margin="3,0,0,0" x:Name="Image" ></Image>
+
+                                <!--<TextBlock Text="{Binding ImageName}" FontWeight="Bold" />-->
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!--<GridSplitter Width="1"
+                  Grid.Column="0"
+                  Grid.RowSpan="2"  
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Stretch"
+                  Background="Gray"/>-->
+            <!--<GridSplitter Height="5"
+                  Grid.Column="1"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Bottom"
+                  Background="Gray"/>-->
+        </Grid>
+        <!--</StackPanel>-->
+        <Popup Name="MyPopup"
+               Placement="Mouse"
+               HorizontalOffset="0"
+               VerticalOffset="0"
+               AllowsTransparency="False" >
+            <Border Background="#90000000" Visibility="{Binding Visibility}">
+                <Border BorderBrush="Black" BorderThickness="1" Background="AliceBlue" 
+                CornerRadius="10,0,10,0" VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+                    <Border.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" 
+                  Opacity="0.5" Direction="270" 
+                  ShadowDepth="0.7" />
+                    </Border.BitmapEffect>
+                    <Grid>
+                        <Image Source="/Images/Sync.png" ></Image>
+                        <!--<Button Click="Hide_Click" Margin="80" >Hide</Button>-->
+                        <Button Height="32" Width="32"  Margin="200,-188,0,0" Background="Transparent" Click="Hide_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                         <Image Source="/Images/close.jpg" Height="25" HorizontalAlignment="Right" ></Image>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+                </Border>
+            </Border>
+        </Popup>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\MainWindow.baml
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\MainWindow.g.cs
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\App.g.cs
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\FlipBook_MarkupCompile.cache
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\FlipBook.g.resources
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\FlipBook.Properties.Resources.resources
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\FlipBook.csproj.GenerateResource.Cache
+F:\practise\CS235\PhotoManager\FlipBook\bin\Debug\FlipBook.exe
+F:\practise\CS235\PhotoManager\FlipBook\bin\Debug\FlipBook.pdb
+F:\practise\CS235\PhotoManager\FlipBook\bin\Debug\WPFMitsuControls.dll
+F:\practise\CS235\PhotoManager\FlipBook\bin\Debug\WPFMitsuControls.pdb
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\FlipBook.exe
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\FlipBook.pdb
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\UserControl1.baml
+F:\practise\CS235\PhotoManager\FlipBook\obj\x86\Debug\UserControl1.g.cs

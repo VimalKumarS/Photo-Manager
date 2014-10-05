@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="PhotoManager.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:controls="clr-namespace:WPFMitsuControls;assembly=WPFMitsuControls"
+             d:DesignHeight="500" d:DesignWidth="500">
+    <Grid>
+        <Viewbox Margin="20">
+            <Grid Height="562" Width="673">
+                <controls:Book x:Name="myBook" Width="600" Height="400" Margin="15" >
+                    <controls:Book.ItemTemplate>
+                        <DataTemplate>
+                             <Border BorderThickness="4" BorderBrush="Gray" Background="#FFB2C3C8" >
+                                <ContentControl Content="{Binding .}"  />
+                            </Border>
+                        </DataTemplate>
+                    </controls:Book.ItemTemplate>
+                    <Image Source=".\AlbumPhoto\1.jpg" ></Image>
+                    <Image Source=".\AlbumPhoto\2.jpg"></Image>
+                    <Image Source=".\AlbumPhoto\3.jpg"></Image>
+                    <Image Source=".\AlbumPhoto\4.jpg"></Image>
+                    <Image Source=".\AlbumPhoto\5.jpg"></Image>
+                    <Image Source=".\AlbumPhoto\6.jpg"></Image>
+                    <Image Source=".\AlbumPhoto\7.jpg"></Image>
+                    <Image Source=".\AlbumPhoto\8.jpg"></Image>
+                </controls:Book>
+                <Button Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Center" 
+    		VerticalContentAlignment="Center" Background="Transparent" Height="50" Click="AutoPreviousClick" />
+                <Button Content="&gt;" HorizontalAlignment="Right" VerticalAlignment="Center"
+		    VerticalContentAlignment="Center" Background="Transparent" Height="50" Click="AutoNextClick" />
+            </Grid>
+        </Viewbox>
+    </Grid>
+</UserControl>

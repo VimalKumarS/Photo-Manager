@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9BD3EF7-EE65-41A2-90C8-57C029AAEA5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhotoManager</RootNamespace>
+    <AssemblyName>PhotoManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>images.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.Ribbon, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFControlsLibrary">
+      <HintPath>C:\Users\Vimal Kumar\Downloads\WPFRichEditorLibrary_0.0.0.6_src\WPFRichEditorLibrary\lib\WPFControlsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFMitsuControls">
+      <HintPath>..\..\..\..\SJSU\cs235\wpfbookcontrol-24122\WPFMitsuControls\bin\Debug\WPFMitsuControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="SyncOption.xaml.cs">
+      <DependentUpon>SyncOption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SyncOption.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\1353183085_save.png" />
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\copy.png" />
+    <Resource Include="Images\cut.png" />
+    <Resource Include="Images\format_painter.png" />
+    <Resource Include="Images\go-next.png" />
+    <Resource Include="Images\go-previous.png" />
+    <Resource Include="Images\help.png" />
+    <Resource Include="Images\home.png" />
+    <Resource Include="Images\options.png" />
+    <Resource Include="Images\paste.png" />
+    <Resource Include="Images\personal.png" />
+    <Resource Include="Images\quit.png" />
+    <Resource Include="Images\redo.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\facebook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\googleplus.jpg" />
+    <Resource Include="Images\instagram.jpg" />
+    <Resource Include="Images\sync.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\openfolder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Collage\tiles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Collage\Collage1.jpg" />
+    <Resource Include="Collage\Collage2.jpg" />
+    <Resource Include="Collage\Collage3.jpg" />
+    <Resource Include="Collage\Collage4.jpg" />
+    <Resource Include="Collage\Collage5.jpg" />
+    <Resource Include="Collage\Collage6.jpg" />
+    <Resource Include="Collage\collage7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MyComputer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Editor.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\collageicon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PBook1.jpg" />
+    <Resource Include="Images\PBook2.jpg" />
+    <Resource Include="Images\PBook3.jpg" />
+    <Resource Include="Images\PBook4.jpg" />
+    <Resource Include="Images\PhotoAlbum.jpg" />
+    <Resource Include="Images\photoBookAlbum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\facebookshare.png" />
+    <Resource Include="Images\ShareGooglePlus.jpg" />
+    <Resource Include="Images\shareInstagram.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SyncUC.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="photoalbum\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AlbumPhoto\1.jpg" />
+    <Resource Include="AlbumPhoto\2.jpg" />
+    <Resource Include="AlbumPhoto\3.jpg" />
+    <Resource Include="AlbumPhoto\4.jpg" />
+    <Resource Include="AlbumPhoto\5.jpg" />
+    <Resource Include="AlbumPhoto\6.jpg" />
+    <Resource Include="AlbumPhoto\7.jpg" />
+    <Resource Include="AlbumPhoto\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Animals.png" />
+    <Resource Include="Images\AutoCorrect.png" />
+    <Resource Include="Images\Bubbles.png" />
+    <Resource Include="Images\Costumes.png" />
+    <Resource Include="Images\crop.png" />
+    <Resource Include="Images\Party.png" />
+    <Resource Include="Images\Resize.png" />
+    <Resource Include="Images\Stickies.png" />
+    <Resource Include="Images\Test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SeasonGretting.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Effect.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Effect1.png" />
+    <Resource Include="Images\Effect2.png" />
+    <Resource Include="Images\Effect3.png" />
+    <Resource Include="Images\Effect4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MyComp2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sync3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\instagram2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\EventCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\collage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PhotoAlbum1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
